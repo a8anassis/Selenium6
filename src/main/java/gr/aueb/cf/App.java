@@ -24,21 +24,20 @@ public class App
 
         WebElement searchField =  chromeDriver.findElement(By.name("search"));
         searchField.click();
-        Thread.sleep(3000);
-
         searchField.sendKeys("MacBook");
         Thread.sleep(3000);
 
         WebElement btn =  chromeDriver.findElement(By.className("btn-default"));
-        Thread.sleep(3000);
-
         btn.click();
         Thread.sleep(3000);
 
         WebElement makBookLink = chromeDriver.findElement(By.linkText("MacBook"));
+        makBookLink.click();
         Thread.sleep(3000);
 
-        makBookLink.click();
+        WebElement inputQuantity = chromeDriver.findElement(By.id("input-quantity"));
+        inputQuantity.clear();
+        inputQuantity.sendKeys("2");
 
 
 //        chromeDriver.close();   // tab closed
