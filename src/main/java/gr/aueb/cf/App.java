@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 /**
@@ -13,8 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
 
         WebDriver chromeDriver = new ChromeDriver();
@@ -24,8 +24,15 @@ public class App
 
         WebElement searchField =  chromeDriver.findElement(By.name("search"));
         searchField.click();
-
+        Thread.sleep(3000);
         searchField.sendKeys("MacBook");
+        Thread.sleep(3000);
+
+        WebElement btn =  chromeDriver.findElement(By.className("btn-default"));
+        btn.click();
+
+        WebElement makBookLink = chromeDriver.findElement(By.linkText(""));
+        makBookLink.click();
 
 
 
