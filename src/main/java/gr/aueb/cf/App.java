@@ -31,7 +31,7 @@ public class App
         WebElement btn =  chromeDriver.findElement(By.className("btn-default"));
         btn.click();
 
-        WebElement makBookLink = chromeDriver.findElement(By.linkText(""));
+        WebElement makBookLink = chromeDriver.findElement(By.linkText("https://tutorialsninja.com/demo/index.php?route=product/product&product_id=43&search=MacBook"));
         makBookLink.click();
 
 
