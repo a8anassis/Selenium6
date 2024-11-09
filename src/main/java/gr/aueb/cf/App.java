@@ -25,18 +25,22 @@ public class App
         WebElement searchField =  chromeDriver.findElement(By.name("search"));
         searchField.click();
         Thread.sleep(3000);
+
         searchField.sendKeys("MacBook");
         Thread.sleep(3000);
 
         WebElement btn =  chromeDriver.findElement(By.className("btn-default"));
-        btn.click();
+        Thread.sleep(3000);
 
-        WebElement makBookLink = chromeDriver.findElement(By.linkText("https://tutorialsninja.com/demo/index.php?route=product/product&product_id=43&search=MacBook"));
+        btn.click();
+        Thread.sleep(3000);
+
+        WebElement makBookLink = chromeDriver.findElement(By.linkText("MacBook"));
+        Thread.sleep(3000);
+
         makBookLink.click();
 
 
-
-
-        chromeDriver.close();
+//        chromeDriver.close();   // tab closed
     }
 }
